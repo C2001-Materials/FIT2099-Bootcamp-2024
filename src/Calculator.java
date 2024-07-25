@@ -9,7 +9,7 @@ public class Calculator {
     }
 
     /**
-     * @param i integer number
+     * @param i integer
      * @return returns true if i is positive; false otherwise
      */
 
