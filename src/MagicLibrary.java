@@ -1,5 +1,7 @@
-public class MagicLibrary {
-    public void printStatus() {
+public class MagicLibrary
+{
+    public void printStatus()
+    {
         System.out.println("Welcome to the Hogwarts Library of FIT2099");
         // createBooks();
         // displayBooks();
