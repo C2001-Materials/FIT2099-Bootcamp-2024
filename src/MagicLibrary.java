@@ -1,6 +1,6 @@
 public class MagicLibrary
 {
-    private MagicBook[] magicBooks;
+    private final MagicBook[] magicBooks;
 
     public MagicLibrary()
     {

@@ -1,8 +1,8 @@
 public class HerbAndPotionBook extends MagicBook
 {
-    private double magicPoint;
+    private int magicPoint;
 
-    public HerbAndPotionBook(String ID, String title, String author, double magicPoint)
+    public HerbAndPotionBook(String ID, String title, String author, int magicPoint)
     {
         super(ID, title, author);
         this.magicPoint = magicPoint;

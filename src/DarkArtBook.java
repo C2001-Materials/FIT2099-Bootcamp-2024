@@ -1,8 +1,8 @@
 public class DarkArtBook extends MagicBook
 {
-    private double darkMagicPoint;
+    private int darkMagicPoint;
 
-    public DarkArtBook(String ID, String title, String author, double darkMagicPoint)
+    public DarkArtBook(String ID, String title, String author, int darkMagicPoint)
     {
         super(ID, title, author);
         this.darkMagicPoint = darkMagicPoint;
