@@ -29,8 +29,9 @@ public class MagicBook
     @Override
     public String toString()
     {
-        return  "ID: " + ID +
-                ", Title: " + title +
-                ", Author: " + author;
+        return  "Title: " + title + " | " +
+                "Author: " + author + " | " +
+                "ID: " + ID + " | ";
+
     }
 }

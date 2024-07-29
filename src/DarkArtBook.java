@@ -11,6 +11,6 @@ public class DarkArtBook extends MagicBook
     @Override
     public String toString()
     {
-        return super.toString() + ", Dark Magic Point: " + darkMagicPoint;
+        return super.toString() + "Dark Magic Point: " + darkMagicPoint;
     }
 }

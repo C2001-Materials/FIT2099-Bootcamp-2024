@@ -11,7 +11,7 @@ public class HerbAndPotionBook extends MagicBook
     @Override
     public String toString()
     {
-        return super.toString() + ", Magic Point: " + magicPoint;
+        return super.toString() + "Magic Point: " + magicPoint;
     }
 
 }
