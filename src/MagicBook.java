@@ -40,7 +40,7 @@ public abstract class MagicBook
     @Override
     public String toString()
     {
-        return  "Title: " + title + " | " +
+        return  "Name: " + title + " | " +
                 "Author: " + author + " | " +
                 "ID: " + ID + " | ";
 

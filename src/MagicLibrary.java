@@ -20,16 +20,29 @@ public class MagicLibrary {
         magicBooks.add(new AncientMagicBook("A02", "Scars of Salem: Essays on the Witch Trials of 1692", "Carlos Eduardos", 5));
     }
 
-    public void displayBooks() {
-        for (int i = 0; i < magicBooks.size(); i++) {
-            System.out.println("Book (" + (i + 1) + ")\n" + magicBooks.get(i).toString() + "\n");
+//    public void displayBooks() {
+//        for (int i = 0; i < magicBooks.size(); i++) {
+//            System.out.println("Book (" + (i + 1) + ")\n" + magicBooks.get(i).toString() + "\n");
+//        }
+//    }
+
+    public void addActionsToMenu() {
+        List<Action> actions = new ArrayList<>();
+
+        User user = new User(0, 0);
+        for (MagicBook book : magicBooks) {
+            actions.addAll(book.allowableActions());
         }
+
+        System.out.println("##################################");
+        Action action = Menu.showMenu(actions);
+        System.out.println(action.execute(user));
     }
 
     public void printStatus() {
-        System.out.println("Welcome to the Hogwarts Library of FIT2099\n");
+        System.out.println("\nWelcome to Hogwarts Library of FIT2099");
         createBooks();
-        displayBooks();
+        addActionsToMenu();
         System.out.println("Thank you for visiting Hogwarts Library of FIT2099!");
     }
 }

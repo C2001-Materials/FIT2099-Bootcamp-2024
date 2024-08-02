@@ -15,7 +15,7 @@ public class ReadAction extends Action {
         int userNewMagicPoint = user.getMagicPoint();
         int userNewDarkMagicPoint = user.getDarkMagicPoint();
 
-        return "User has read the book and now has " + userNewMagicPoint + " magic points and " + userNewDarkMagicPoint + " dark magic points.";
+        return "User now has Magic power of " + userNewMagicPoint + " and Dark Art power of " + userNewDarkMagicPoint;
     }
 
     @Override
