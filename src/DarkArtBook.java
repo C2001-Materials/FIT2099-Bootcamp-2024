@@ -9,6 +9,11 @@ public class DarkArtBook extends MagicBook
     }
 
     @Override
+    public void read(User user) {
+        user.addDarkMagicPoint(darkMagicPoint);
+    }
+
+    @Override
     public String toString()
     {
         return super.toString() + "Dark Magic Point: " + darkMagicPoint;

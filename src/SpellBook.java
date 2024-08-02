@@ -9,6 +9,11 @@ public class SpellBook extends MagicBook
     }
 
     @Override
+    public void read(User user) {
+        user.addMagicPoint(magicPoint);
+    }
+
+    @Override
     public String toString()
     {
         return super.toString() + "Magic Point: " + magicPoint;

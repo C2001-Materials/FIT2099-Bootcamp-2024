@@ -10,8 +10,7 @@ public class ReadAction extends Action {
     @Override
     public String execute(User user)
     {
-        // trigger some kind of changes to the user’s magicPoint and darkMagicPoint
-        //magicBook.read(user); // This method will be implemented in later bootcamp tasks
+        magicBook.read(user);
 
         int userNewMagicPoint = user.getMagicPoint();
         int userNewDarkMagicPoint = user.getDarkMagicPoint();

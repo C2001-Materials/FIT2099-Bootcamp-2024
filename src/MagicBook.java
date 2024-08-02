@@ -1,4 +1,4 @@
-public class MagicBook
+public abstract class MagicBook
 {
     private String ID;
     private String title;
@@ -25,6 +25,8 @@ public class MagicBook
     {
         return author;
     }
+
+    public abstract void read(User user);
 
     @Override
     public String toString()
