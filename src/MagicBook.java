@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class MagicBook
 {
     private String ID;
@@ -27,6 +30,12 @@ public abstract class MagicBook
     }
 
     public abstract void read(User user);
+
+    public List<Action> allowableActions() {
+        List<Action> actions = new ArrayList<>();
+        actions.add(new ReadAction(this));
+        return actions;
+    }
 
     @Override
     public String toString()
