@@ -1,6 +1,11 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class User {
     private int magicPoint;
     private int darkMagicPoint;
+    private final Set<Enum<?>> capabilitySet = new HashSet<>();
+
 
     public User(int magicPoint, int darkMagicPoint) {
         this.magicPoint = magicPoint;
@@ -46,4 +51,21 @@ public class User {
     public void resetDarkMagicPoint() {
         this.darkMagicPoint = 0;
     }
+
+    public boolean hasCapability(Enum<?> capability) {
+        return capabilitySet.contains(capability);
+    }
+
+    public void addCapability(Enum<?> capability) {
+        if (!hasCapability(capability)) {
+            capabilitySet.add(capability);
+        }
+    }
+
+    public void removeCapability(Enum<?> capability) {
+        if (hasCapability(capability)) {
+            capabilitySet.remove(capability);
+        }
+    }
+
 }

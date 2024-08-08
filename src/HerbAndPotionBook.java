@@ -8,7 +8,11 @@ public class HerbAndPotionBook extends MagicBook {
 
     @Override
     public void read(User user) {
-        user.addMagicPoint(magicPoint);
+        if (user.hasCapability(Status.CURSED)) {
+            System.out.println("You are cursed! You cannot read this book!");
+        } else {
+            user.addMagicPoint(magicPoint);
+        }
     }
 
     @Override
