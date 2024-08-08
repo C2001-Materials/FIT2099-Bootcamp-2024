@@ -1,4 +1,4 @@
-public class HerbAndPotionBook extends MagicBook {
+public class HerbAndPotionBook extends MagicBook implements Borrowable {
     private int magicPoint;
 
     public HerbAndPotionBook(String ID, String title, String author, int magicPoint) {
@@ -13,6 +13,10 @@ public class HerbAndPotionBook extends MagicBook {
         } else {
             user.addMagicPoint(magicPoint);
         }
+    }
+    @Override
+    public void borrow(User user) {
+        user.borrowBook(this);
     }
 
     @Override

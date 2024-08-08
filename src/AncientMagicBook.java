@@ -17,7 +17,6 @@ public class AncientMagicBook extends MagicBook {
             System.out.println("I am feeling much better!");
         } else {
             user.addMagicPoint(magicPoint);
-            user.addCapability(status);
         }
     }
 

@@ -1,4 +1,4 @@
-public class ReadAction extends Action {
+public class ReadAction implements Action {
 
     private MagicBook magicBook;
 

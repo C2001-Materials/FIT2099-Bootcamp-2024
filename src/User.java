@@ -1,15 +1,20 @@
 import java.util.HashSet;
 import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-public class User {
+public class User implements ActionCapable{
     private int magicPoint;
     private int darkMagicPoint;
     private final Set<Enum<?>> capabilitySet = new HashSet<>();
+    private boolean complete;
+    private final List<Borrowable> borrowedBooks = new ArrayList<>();
 
 
     public User(int magicPoint, int darkMagicPoint) {
         this.magicPoint = magicPoint;
         this.darkMagicPoint = darkMagicPoint;
+        this.complete = false;
     }
 
     public int getMagicPoint() {
@@ -66,6 +71,25 @@ public class User {
         if (hasCapability(capability)) {
             capabilitySet.remove(capability);
         }
+    }
+
+    public boolean isComplete() {
+        return complete;
+    }
+
+    public void setComplete(boolean complete) {
+        this.complete = complete;
+    }
+
+    public void borrowBook(Borrowable book) {
+        borrowedBooks.add(book);
+    }
+
+    @Override
+    public List<Action> allowableActions() {
+        List<Action> actions = new ArrayList<>();
+        actions.add(new ExitAction());
+        return actions;
     }
 
 }

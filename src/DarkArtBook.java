@@ -1,4 +1,4 @@
-public class DarkArtBook extends MagicBook {
+public class DarkArtBook extends MagicBook implements Borrowable {
     private int darkMagicPoint;
     private Status status;
 
@@ -12,6 +12,11 @@ public class DarkArtBook extends MagicBook {
     public void read(User user) {
         user.addDarkMagicPoint(this.darkMagicPoint);
         user.addCapability(this.status);
+    }
+
+    @Override
+    public void borrow(User user) {
+        user.borrowBook(this);
     }
 
     @Override

@@ -21,16 +21,22 @@ public class MagicLibrary {
     }
 
     public void addActionsToMenu() {
-        List<Action> actions = new ArrayList<>();
+        User user = new User(0, 0); // Assuming a user is created here
+        while (!user.isComplete()) {
+            List<Action> actions = new ArrayList<>();
 
-        User user = new User(0, 0);
-        for (MagicBook book : magicBooks) {
-            actions.addAll(book.allowableActions());
+            List<ActionCapable> actionCapables = new ArrayList<>();
+            actionCapables.add(user); // ExitAction
+            // actionCapables.add(new StaticOneLibrarian());
+            actionCapables.addAll(magicBooks); //ReadAction and BorrowAction
+            for (ActionCapable actionCapable : actionCapables) {
+                actions.addAll(actionCapable.allowableActions());
+            }
+
+            System.out.println("##################################");
+            Action action = Menu.showMenu(actions);
+            System.out.println(action.execute(user));
         }
-
-        System.out.println("##################################");
-        Action action = Menu.showMenu(actions);
-        System.out.println(action.execute(user));
     }
 
     public void printStatus() {
