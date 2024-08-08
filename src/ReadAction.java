@@ -2,14 +2,12 @@ public class ReadAction extends Action {
 
     private MagicBook magicBook;
 
-    public ReadAction(MagicBook magicBook)
-    {
+    public ReadAction(MagicBook magicBook) {
         this.magicBook = magicBook;
     }
 
     @Override
-    public String execute(User user)
-    {
+    public String execute(User user) {
         magicBook.read(user);
 
         int userNewMagicPoint = user.getMagicPoint();
@@ -19,8 +17,7 @@ public class ReadAction extends Action {
     }
 
     @Override
-    public String menuDescription()
-    {
+    public String menuDescription() {
         return "Read Book " + this.magicBook;
     }
 }
