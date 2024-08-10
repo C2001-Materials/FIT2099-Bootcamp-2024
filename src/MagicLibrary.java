@@ -27,7 +27,7 @@ public class MagicLibrary {
 
             List<ActionCapable> actionCapables = new ArrayList<>();
             actionCapables.add(user); // ExitAction
-            // actionCapables.add(new StaticOneLibrarian());
+            actionCapables.add(new StaticOneLibrarian());
             actionCapables.addAll(magicBooks); //ReadAction and BorrowAction
             for (ActionCapable actionCapable : actionCapables) {
                 actions.addAll(actionCapable.allowableActions());

@@ -9,6 +9,6 @@ public class ExitAction implements Action {
 
     @Override
     public String menuDescription() {
-        return "Exiting the library...";
+        return "Exit from Hogwarts library";
     }
 }
