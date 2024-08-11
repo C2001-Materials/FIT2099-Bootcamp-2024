@@ -1,3 +1,8 @@
+package edu.monash.fit2099bootcamp;
+
+import edu.monash.fit2099bootcamp.action.Action;
+import edu.monash.fit2099bootcamp.action.TalkAction;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

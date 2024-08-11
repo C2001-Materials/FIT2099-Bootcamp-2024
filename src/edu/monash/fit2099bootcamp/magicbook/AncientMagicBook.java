@@ -1,3 +1,8 @@
+package edu.monash.fit2099bootcamp.magicbook;
+
+import edu.monash.fit2099bootcamp.enums.Status;
+import edu.monash.fit2099bootcamp.User;
+
 public class AncientMagicBook extends MagicBook {
     private int magicPoint;
     private Status status;

@@ -1,6 +1,11 @@
+package edu.monash.fit2099bootcamp.action;
+
+import edu.monash.fit2099bootcamp.Borrowable;
+import edu.monash.fit2099bootcamp.User;
+
 public class BorrowAction implements Action {
 
-    private Borrowable  magicBook;
+    private Borrowable magicBook;
 
     public BorrowAction(Borrowable magicBook) {
         this.magicBook = magicBook;

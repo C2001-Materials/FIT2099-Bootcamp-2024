@@ -1,3 +1,12 @@
+package edu.monash.fit2099bootcamp.magicbook;
+
+import edu.monash.fit2099bootcamp.ActionCapable;
+import edu.monash.fit2099bootcamp.Borrowable;
+import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.action.Action;
+import edu.monash.fit2099bootcamp.action.BorrowAction;
+import edu.monash.fit2099bootcamp.action.ReadAction;
+
 import java.util.ArrayList;
 import java.util.List;
 

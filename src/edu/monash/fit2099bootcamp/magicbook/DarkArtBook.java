@@ -1,3 +1,9 @@
+package edu.monash.fit2099bootcamp.magicbook;
+
+import edu.monash.fit2099bootcamp.Borrowable;
+import edu.monash.fit2099bootcamp.enums.Status;
+import edu.monash.fit2099bootcamp.User;
+
 public class DarkArtBook extends MagicBook implements Borrowable {
     private int darkMagicPoint;
     private Status status;

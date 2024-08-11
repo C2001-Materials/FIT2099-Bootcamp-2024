@@ -1,9 +1,14 @@
+package edu.monash.fit2099bootcamp;
+
+import edu.monash.fit2099bootcamp.action.Action;
+import edu.monash.fit2099bootcamp.action.ExitAction;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User implements ActionCapable{
+public class User implements ActionCapable {
     private int magicPoint;
     private int darkMagicPoint;
     private final Set<Enum<?>> capabilitySet = new HashSet<>();

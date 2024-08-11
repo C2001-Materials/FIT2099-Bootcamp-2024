@@ -1,3 +1,8 @@
+package edu.monash.fit2099bootcamp.action;
+
+import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.magicbook.MagicBook;
+
 public class ReadAction implements Action {
 
     private MagicBook magicBook;
@@ -13,7 +18,7 @@ public class ReadAction implements Action {
         int userNewMagicPoint = user.getMagicPoint();
         int userNewDarkMagicPoint = user.getDarkMagicPoint();
 
-        return "User now has Magic power of " + userNewMagicPoint + " and Dark Art power of " + userNewDarkMagicPoint;
+        return "edu.monash.fit2099bootcamp.User now has Magic power of " + userNewMagicPoint + " and Dark Art power of " + userNewDarkMagicPoint;
     }
 
     @Override

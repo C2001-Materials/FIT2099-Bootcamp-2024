@@ -1,3 +1,8 @@
+package edu.monash.fit2099bootcamp;
+
+import edu.monash.fit2099bootcamp.action.Action;
+import edu.monash.fit2099bootcamp.magicbook.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,9 +31,9 @@ public class MagicLibrary {
             List<Action> actions = new ArrayList<>();
 
             List<ActionCapable> actionCapables = new ArrayList<>();
-            actionCapables.add(user); // ExitAction
+            actionCapables.add(user); // edu.monash.fit2099bootcamp.action.ExitAction
             actionCapables.add(new StaticOneLibrarian());
-            actionCapables.addAll(magicBooks); //ReadAction and BorrowAction
+            actionCapables.addAll(magicBooks); //edu.monash.fit2099bootcamp.action.ReadAction and edu.monash.fit2099bootcamp.action.BorrowAction
             for (ActionCapable actionCapable : actionCapables) {
                 actions.addAll(actionCapable.allowableActions());
             }

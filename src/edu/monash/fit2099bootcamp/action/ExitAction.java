@@ -1,3 +1,7 @@
+package edu.monash.fit2099bootcamp.action;
+
+import edu.monash.fit2099bootcamp.User;
+
 public class ExitAction implements Action {
     @Override
     public String execute(User user) {
