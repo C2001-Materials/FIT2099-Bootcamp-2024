@@ -5,8 +5,9 @@ import edu.monash.fit2099bootcamp.User;
 public class ExitAction implements Action {
     @Override
     public String execute(User user) {
+        String ANSI_YELLOW = "\u001B[33m";
         user.setComplete(true);
-        System.out.println("Thank you for visiting Hogwarts Library of FIT2099!");
+        System.out.println(ANSI_YELLOW+"Exiting from Hogwarts Library...");
         System.exit(0);
         return null;
     }

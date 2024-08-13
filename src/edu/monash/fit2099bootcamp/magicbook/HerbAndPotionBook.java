@@ -1,8 +1,12 @@
 package edu.monash.fit2099bootcamp.magicbook;
 
 import edu.monash.fit2099bootcamp.Borrowable;
+import edu.monash.fit2099bootcamp.action.Action;
+import edu.monash.fit2099bootcamp.action.BorrowAction;
 import edu.monash.fit2099bootcamp.enums.Status;
 import edu.monash.fit2099bootcamp.User;
+
+import java.util.List;
 
 public class HerbAndPotionBook extends MagicBook implements Borrowable {
     private int magicPoint;
@@ -20,14 +24,23 @@ public class HerbAndPotionBook extends MagicBook implements Borrowable {
             user.addMagicPoint(magicPoint);
         }
     }
+
     @Override
     public void borrow(User user) {
-        user.borrowBook(this);
+        user.addMagicPoint(magicPoint);
+        System.out.println("User has borrowed " + getTitle() +
+                " for several days, and have returned it back to Magic Library.");
+    }
+
+    @Override
+    public List<Action> allowableActions() {
+        List<Action> actions = super.allowableActions();
+        actions.add(new BorrowAction(this));
+        return actions;
     }
 
     @Override
     public String toString() {
         return super.toString() + "Magic Point: " + magicPoint;
     }
-
 }

@@ -39,9 +39,9 @@ public abstract class MagicBook implements ActionCapable {
     public List<Action> allowableActions() {
         List<Action> actions = new ArrayList<>();
         actions.add(new ReadAction(this));
-        if (this instanceof Borrowable) {
-            actions.add(new BorrowAction((Borrowable) this));
-        }
+//        if (this instanceof Borrowable) {
+//            actions.add(new BorrowAction((Borrowable) this));
+//        }
         return actions;
     }
 

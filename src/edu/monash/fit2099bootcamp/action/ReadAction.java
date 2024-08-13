@@ -13,12 +13,16 @@ public class ReadAction implements Action {
 
     @Override
     public String execute(User user) {
+        // ANSI escape code blue text
+        String ANSI_YELLOW = "\u001B[33m";
+        // ANSI escape code default text
+        String ANSI_RESET = "\u001B[0m";
         magicBook.read(user);
 
         int userNewMagicPoint = user.getMagicPoint();
         int userNewDarkMagicPoint = user.getDarkMagicPoint();
 
-        return "edu.monash.fit2099bootcamp.User now has Magic power of " + userNewMagicPoint + " and Dark Art power of " + userNewDarkMagicPoint;
+        return "User now has Magic points of " + ANSI_YELLOW+userNewMagicPoint +ANSI_RESET+ " and Dark Magic points of " +ANSI_YELLOW+ userNewDarkMagicPoint+ANSI_RESET;
     }
 
     @Override
