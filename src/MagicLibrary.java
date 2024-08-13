@@ -3,9 +3,12 @@ import java.util.List;
 
 public class MagicLibrary {
     private final List<MagicBook> magicBooks;
+    private User user;
 
     public MagicLibrary() {
         this.magicBooks = new ArrayList<>();
+        this.user = new User(0, 0);
+
     }
 
     public void createBooks() {
@@ -23,7 +26,7 @@ public class MagicLibrary {
     public void addActionsToMenu() {
         List<Action> actions = new ArrayList<>();
 
-        User user = new User(0, 0);
+        //User user = new User(0, 0);
         for (MagicBook book : magicBooks) {
             actions.addAll(book.allowableActions());
         }
