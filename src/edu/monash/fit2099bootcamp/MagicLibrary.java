@@ -8,9 +8,11 @@ import java.util.List;
 
 public class MagicLibrary {
     private final List<MagicBook> magicBooks;
+    private User user;
 
     public MagicLibrary() {
         this.magicBooks = new ArrayList<>();
+        this.user = new User(0, 0);
     }
 
     public void createBooks() {
@@ -26,14 +28,13 @@ public class MagicLibrary {
     }
 
     public void addActionsToMenu() {
-        User user = new User(0, 0); // Assuming a user is created here
         while (!user.isComplete()) {
             List<Action> actions = new ArrayList<>();
 
             List<ActionCapable> actionCapables = new ArrayList<>();
-            actionCapables.add(user); // edu.monash.fit2099bootcamp.action.ExitAction
+            actionCapables.add(user); // ExitAction
             actionCapables.add(new StaticOneLibrarian());
-            actionCapables.addAll(magicBooks); //edu.monash.fit2099bootcamp.action.ReadAction and edu.monash.fit2099bootcamp.action.BorrowAction
+            actionCapables.addAll(magicBooks); // ReadAction and BorrowAction
             for (ActionCapable actionCapable : actionCapables) {
                 actions.addAll(actionCapable.allowableActions());
             }
@@ -48,6 +49,6 @@ public class MagicLibrary {
         System.out.println("\nWelcome to Hogwarts Library of FIT2099");
         createBooks();
         addActionsToMenu();
-        System.out.println("Thank you for visiting Hogwarts Library of FIT2099!");
+        //System.out.println("Thank you for visiting Hogwarts Library of FIT2099!");
     }
 }
