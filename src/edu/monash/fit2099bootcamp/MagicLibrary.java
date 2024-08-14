@@ -1,3 +1,8 @@
+package edu.monash.fit2099bootcamp;
+
+import edu.monash.fit2099bootcamp.action.Action;
+import edu.monash.fit2099bootcamp.magicbook.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +13,6 @@ public class MagicLibrary {
     public MagicLibrary() {
         this.magicBooks = new ArrayList<>();
         this.user = new User(0, 0);
-
     }
 
     public void createBooks() {
@@ -24,22 +28,27 @@ public class MagicLibrary {
     }
 
     public void addActionsToMenu() {
-        List<Action> actions = new ArrayList<>();
+        while (!user.isComplete()) {
+            List<Action> actions = new ArrayList<>();
 
-        //User user = new User(0, 0);
-        for (MagicBook book : magicBooks) {
-            actions.addAll(book.allowableActions());
+            List<ActionCapable> actionCapables = new ArrayList<>();
+            actionCapables.add(user); // ExitAction
+            actionCapables.add(new StaticOneLibrarian());
+            actionCapables.addAll(magicBooks); // ReadAction and BorrowAction
+            for (ActionCapable actionCapable : actionCapables) {
+                actions.addAll(actionCapable.allowableActions());
+            }
+
+            System.out.println("##################################");
+            Action action = Menu.showMenu(actions);
+            System.out.println(action.execute(user));
         }
-
-        System.out.println("##################################");
-        Action action = Menu.showMenu(actions);
-        System.out.println(action.execute(user));
     }
 
     public void printStatus() {
         System.out.println("\nWelcome to Hogwarts Library of FIT2099");
         createBooks();
         addActionsToMenu();
-        System.out.println("Thank you for visiting Hogwarts Library of FIT2099!");
+        //System.out.println("Thank you for visiting Hogwarts Library of FIT2099!");
     }
 }

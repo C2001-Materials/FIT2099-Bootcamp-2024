@@ -1,3 +1,7 @@
+package edu.monash.fit2099bootcamp;
+
+import edu.monash.fit2099bootcamp.action.Action;
+
 import java.util.*;
 
 public class Menu {
