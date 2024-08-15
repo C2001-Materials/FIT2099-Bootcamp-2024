@@ -1,7 +1,7 @@
 package edu.monash.fit2099bootcamp.action;
 
-import edu.monash.fit2099bootcamp.librarian.Librarian;
-import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.actioncapables.librarian.Librarian;
+import edu.monash.fit2099bootcamp.actioncapables.User;
 
 /**
  * A class that represents a TalkAction, implementing Action interface.

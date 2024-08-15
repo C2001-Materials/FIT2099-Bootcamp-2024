@@ -1,7 +1,7 @@
 package edu.monash.fit2099bootcamp.action;
 
-import edu.monash.fit2099bootcamp.User;
-import edu.monash.fit2099bootcamp.magicbook.MagicBook;
+import edu.monash.fit2099bootcamp.actioncapables.User;
+import edu.monash.fit2099bootcamp.actioncapables.magicbook.MagicBook;
 
 public class ReadAction implements Action {
     private MagicBook magicBook;

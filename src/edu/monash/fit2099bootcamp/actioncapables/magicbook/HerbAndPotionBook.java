@@ -1,11 +1,11 @@
-package edu.monash.fit2099bootcamp.magicbook;
+package edu.monash.fit2099bootcamp.actioncapables.magicbook;
 
 import edu.monash.fit2099bootcamp.Borrowable;
 import edu.monash.fit2099bootcamp.Utility;
 import edu.monash.fit2099bootcamp.action.Action;
 import edu.monash.fit2099bootcamp.action.BorrowAction;
 import edu.monash.fit2099bootcamp.enums.Status;
-import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.actioncapables.User;
 
 import java.util.List;
 

@@ -1,5 +1,7 @@
-package edu.monash.fit2099bootcamp;
+package edu.monash.fit2099bootcamp.actioncapables;
 
+import edu.monash.fit2099bootcamp.ActionCapable;
+import edu.monash.fit2099bootcamp.Borrowable;
 import edu.monash.fit2099bootcamp.action.Action;
 import edu.monash.fit2099bootcamp.action.ExitAction;
 

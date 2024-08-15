@@ -1,6 +1,6 @@
 package edu.monash.fit2099bootcamp.action;
 
-import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.actioncapables.User;
 
 /**
  * A class that represents an ExitAction, implementing Action interface.

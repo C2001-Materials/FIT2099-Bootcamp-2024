@@ -1,7 +1,7 @@
 package edu.monash.fit2099bootcamp.action;
 
 import edu.monash.fit2099bootcamp.Borrowable;
-import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.actioncapables.User;
 
 /**
  * A class that represents a BorrowAction, implementing Action interface.

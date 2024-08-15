@@ -1,4 +1,4 @@
-package edu.monash.fit2099bootcamp.librarian;
+package edu.monash.fit2099bootcamp.actioncapables.librarian;
 
 import edu.monash.fit2099bootcamp.ActionCapable;
 import edu.monash.fit2099bootcamp.action.Action;

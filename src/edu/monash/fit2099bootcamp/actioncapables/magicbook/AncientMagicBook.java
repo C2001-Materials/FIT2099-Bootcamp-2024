@@ -1,7 +1,7 @@
-package edu.monash.fit2099bootcamp.magicbook;
+package edu.monash.fit2099bootcamp.actioncapables.magicbook;
 
 import edu.monash.fit2099bootcamp.enums.Status;
-import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.actioncapables.User;
 import edu.monash.fit2099bootcamp.Utility;
 
 /**

@@ -1,10 +1,11 @@
 package edu.monash.fit2099bootcamp;
 
 import edu.monash.fit2099bootcamp.action.Action;
-import edu.monash.fit2099bootcamp.librarian.GeminiLibrarian;
-import edu.monash.fit2099bootcamp.librarian.LibrarianTwo;
-import edu.monash.fit2099bootcamp.librarian.StaticOneLibrarian;
-import edu.monash.fit2099bootcamp.magicbook.*;
+import edu.monash.fit2099bootcamp.actioncapables.User;
+import edu.monash.fit2099bootcamp.actioncapables.librarian.GeminiLibrarian;
+import edu.monash.fit2099bootcamp.actioncapables.librarian.LibrarianTwo;
+import edu.monash.fit2099bootcamp.actioncapables.librarian.StaticOneLibrarian;
+import edu.monash.fit2099bootcamp.actioncapables.magicbook.*;
 
 import java.util.ArrayList;
 import java.util.List;
