@@ -35,6 +35,7 @@ public class MagicLibrary {
             actionCapables.add(user); // ExitAction
             actionCapables.add(new StaticOneLibrarian()); // TalkAction
             actionCapables.add(new LibrarianTwo()); // TalkAction
+            actionCapables.add(new GeminiLibrarian()); // TalkAction
 
             actionCapables.addAll(magicBooks); // ReadAction and BorrowAction
             for (ActionCapable actionCapable : actionCapables) {
