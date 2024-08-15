@@ -4,13 +4,24 @@ import edu.monash.fit2099bootcamp.User;
 import edu.monash.fit2099bootcamp.magicbook.MagicBook;
 
 public class ReadAction implements Action {
-
     private MagicBook magicBook;
 
+    /**
+     * Constructor.
+     *
+     * @param magicBook the MagicBook object
+     */
     public ReadAction(MagicBook magicBook) {
         this.magicBook = magicBook;
     }
 
+    /**
+     * Executes the ReadAction.
+     * In this case, increases the user's magic points and dark magic points.
+     *
+     * @param user the User object
+     * @return a String representing the result of the action
+     */
     @Override
     public String execute(User user) {
         // ANSI escape code blue text
@@ -25,6 +36,11 @@ public class ReadAction implements Action {
         return "User now has Magic points of " + ANSI_YELLOW+userNewMagicPoint +ANSI_RESET+ " and Dark Magic points of " +ANSI_YELLOW+ userNewDarkMagicPoint+ANSI_RESET;
     }
 
+    /**
+     * Returns a description of the action.
+     *
+     * @return a String representing the description of the action
+     */
     @Override
     public String menuDescription() {
         return "Read Book " + this.magicBook;

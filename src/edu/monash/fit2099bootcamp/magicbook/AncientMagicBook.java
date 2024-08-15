@@ -4,16 +4,33 @@ import edu.monash.fit2099bootcamp.enums.Status;
 import edu.monash.fit2099bootcamp.User;
 import edu.monash.fit2099bootcamp.Utility;
 
+/**
+ * A class that represents an AncientMagicBook, extending MagicBook class.
+ */
 public class AncientMagicBook extends MagicBook {
     private int magicPoint;
     private Status status;
 
+    /**
+     * Constructor.
+     *
+     * @param title the title of the book
+     * @param author the author of the book
+     * @param magicPoint the magic point of the book
+     */
     public AncientMagicBook(String title, String author, int magicPoint) {
         super(Utility.generateRandomInt(1, 100), title, author);
         this.magicPoint = magicPoint;
         this.status = Status.ANCIENT_WISDOM;
     }
 
+    /**
+     * Reads the AncientMagicBook.
+     * If the user is CURSED, the user will be cured and gain ANCIENT_WISDOM status.
+     * Otherwise, the user will gain magic points as usual.
+     *
+     * @param user the User object
+     */
     @Override
     public void read(User user) {
         if (user.hasCapability(Status.CURSED)) {
@@ -26,6 +43,11 @@ public class AncientMagicBook extends MagicBook {
         }
     }
 
+    /**
+     * Generates a pretty String representation of the AncientMagicBook.
+     *
+     * @return a String representation of the AncientMagicBook
+     */
     @Override
     public String toString() {
         return super.toString() + "Magic Point: " + magicPoint;
