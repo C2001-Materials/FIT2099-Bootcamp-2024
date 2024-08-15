@@ -1,6 +1,7 @@
 package edu.monash.fit2099bootcamp.magicbook;
 
 import edu.monash.fit2099bootcamp.Borrowable;
+import edu.monash.fit2099bootcamp.Utility;
 import edu.monash.fit2099bootcamp.action.Action;
 import edu.monash.fit2099bootcamp.action.BorrowAction;
 import edu.monash.fit2099bootcamp.enums.Status;
@@ -11,8 +12,8 @@ import java.util.List;
 public class HerbAndPotionBook extends MagicBook implements Borrowable {
     private int magicPoint;
 
-    public HerbAndPotionBook(String ID, String title, String author, int magicPoint) {
-        super(ID, title, author);
+    public HerbAndPotionBook( String title, String author, int magicPoint) {
+        super(Utility.generateRandomInt(100, 200), title, author);
         this.magicPoint = magicPoint;
     }
 

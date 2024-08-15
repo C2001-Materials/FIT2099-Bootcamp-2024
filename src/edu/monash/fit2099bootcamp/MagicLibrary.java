@@ -17,14 +17,14 @@ public class MagicLibrary {
 
     public void createBooks() {
         // add the books to the ArrayList
-        magicBooks.add(new SpellBook("S01", "Charms of Defence and Deterrence", "Catullus Spangle", 10));
-        magicBooks.add(new SpellBook("S02", "Essential Defence Against the Dark Arts", "Arsenius Jigger", 10));
-        magicBooks.add(new HerbAndPotionBook("H01", "Goshawk's Guide to Herbology", "Miranda Goshawk", 15));
-        magicBooks.add(new HerbAndPotionBook("H02", "Magical Drafts and Potions", "Arsenius Jigger", 15));
-        magicBooks.add(new DarkArtBook("D01", "Magick Moste Evile", "Godelot", 20));
-        magicBooks.add(new DarkArtBook("D02", "Secrets of the Darkest Art", "Owle Bullock", 30));
-        magicBooks.add(new AncientMagicBook("A01", "Hogwarts: A History", "Bathilda Bagshot", 5));
-        magicBooks.add(new AncientMagicBook("A02", "Scars of Salem: Essays on the Witch Trials of 1692", "Carlos Eduardos", 5));
+        magicBooks.add(new SpellBook("Charms of Defence and Deterrence", "Catullus Spangle", 10));
+        magicBooks.add(new SpellBook("Essential Defence Against the Dark Arts", "Arsenius Jigger", 10));
+        magicBooks.add(new HerbAndPotionBook("Goshawk's Guide to Herbology", "Miranda Goshawk", 15));
+        magicBooks.add(new HerbAndPotionBook("Magical Drafts and Potions", "Arsenius Jigger", 15));
+        magicBooks.add(new DarkArtBook("Magick Moste Evile", "Godelot", 20));
+        magicBooks.add(new DarkArtBook("Secrets of the Darkest Art", "Owle Bullock", 30));
+        magicBooks.add(new AncientMagicBook("Hogwarts: A History", "Bathilda Bagshot", 5));
+        magicBooks.add(new AncientMagicBook("Scars of Salem: Essays on the Witch Trials of 1692", "Carlos Eduardos", 5));
     }
 
     public void addActionsToMenu() {

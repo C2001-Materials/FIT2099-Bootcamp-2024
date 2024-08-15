@@ -2,13 +2,14 @@ package edu.monash.fit2099bootcamp.magicbook;
 
 import edu.monash.fit2099bootcamp.enums.Status;
 import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.Utility;
 
 public class AncientMagicBook extends MagicBook {
     private int magicPoint;
     private Status status;
 
-    public AncientMagicBook(String ID, String title, String author, int magicPoint) {
-        super(ID, title, author);
+    public AncientMagicBook(String title, String author, int magicPoint) {
+        super(Utility.generateRandomInt(1, 100), title, author);
         this.magicPoint = magicPoint;
         this.status = Status.ANCIENT_WISDOM;
     }
