@@ -7,11 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class StaticOneLibrarian implements ActionCapable {
-    private String name = "Mr Chew";
-    private ArrayList<String> monologues = new ArrayList<>();
+public class StaticOneLibrarian  extends Librarian{
+    private ArrayList<String> monologues;
+    private String name;
 
     public StaticOneLibrarian() {
+        this.monologues = new ArrayList<>();
+        this.name = "Mr Chew";
 
         // refer to docs_design/FoundationModelsUsed.txt
         monologues.add("We are only as strong as we are united, as weak as we are divided.");
@@ -24,20 +26,16 @@ public class StaticOneLibrarian implements ActionCapable {
         monologues.add("Haiyaa, you should have used a for-each loop instead of a while loop.");
     }
 
+    @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
+    @Override
     public String speak() {
         Random random = new Random();
         int index = random.nextInt(monologues.size());
         return monologues.get(index);
     }
 
-    @Override
-    public List<Action> allowableActions() {
-        List<Action> actions = new ArrayList<>();
-        actions.add(new TalkAction(this));
-        return actions;
-    }
 }

@@ -7,10 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class LibrarianTwo implements ActionCapable {
-    private ArrayList<String> monologues = new ArrayList<>();
+public class LibrarianTwo extends Librarian {
+    private ArrayList<String> monologues;
+    private String name ;
 
     public LibrarianTwo() {
+        this.monologues = new ArrayList<>();
+        this.name = "Ms Mogana";
 
         // refer to docs_design/FoundationModelsUsed.txt
         monologues.add("We are only as strong as we are united, as weak as we are divided.");
@@ -23,20 +26,19 @@ public class LibrarianTwo implements ActionCapable {
         monologues.add("Haiyaa, you should have used a for-each loop instead of a while loop.");
     }
 
-    public void speak() {
-        Random random = new Random();
-        if (random.nextInt(100) < 25) {
-            System.out.println("deadly silence");
-        } else {
-            int index = random.nextInt(monologues.size());
-            System.out.println(monologues.get(index));
-        }
+    @Override
+    public String getName() {
+        return this.name;
     }
 
     @Override
-    public List<Action> allowableActions() {
-        List<Action> actions = new ArrayList<>();
-        actions.add(new TalkAction(this));
-        return actions;
+    public String speak() {
+        Random random = new Random();
+        if (random.nextInt(100) < 25) {
+            return "\"deadly silence...\"";
+        } else {
+            int index = random.nextInt(monologues.size());
+            return monologues.get(index);
+        }
     }
 }

@@ -1,12 +1,12 @@
 package edu.monash.fit2099bootcamp.action;
 
-import edu.monash.fit2099bootcamp.StaticOneLibrarian;
+import edu.monash.fit2099bootcamp.Librarian;
 import edu.monash.fit2099bootcamp.User;
 
 public class TalkAction implements Action {
-    private final StaticOneLibrarian librarian;
+    private final Librarian librarian;
 
-    public TalkAction(StaticOneLibrarian librarian) {
+    public TalkAction(Librarian librarian) {
         this.librarian = librarian;
     }
 
