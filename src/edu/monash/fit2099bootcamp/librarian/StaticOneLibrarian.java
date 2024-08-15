@@ -1,16 +1,20 @@
-package edu.monash.fit2099bootcamp;
+package edu.monash.fit2099bootcamp.librarian;
 
-import edu.monash.fit2099bootcamp.action.Action;
-import edu.monash.fit2099bootcamp.action.TalkAction;
+import edu.monash.fit2099bootcamp.Utility;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
+/**
+ * A class that represents a StaticOneLibrarian, extending from Librarian.
+ */
 public class StaticOneLibrarian  extends Librarian{
     private ArrayList<String> monologues;
     private String name;
 
+    /**
+     * Constructor.
+     * Name defaults to "Mr Chew".
+     */
     public StaticOneLibrarian() {
         this.monologues = new ArrayList<>();
         this.name = "Mr Chew";
@@ -26,15 +30,25 @@ public class StaticOneLibrarian  extends Librarian{
         monologues.add("Haiyaa, you should have used a for-each loop instead of a while loop.");
     }
 
+    /**
+     * Returns the name of the StaticOneLibrarian object.
+     *
+     * @return a String representing the name of the StaticOneLibrarian object
+     */
     @Override
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Returns the speech of the StaticOneLibrarian,
+     * taken from a list of possible speeches in the monologue.
+     *
+     * @return the speech of the StaticOneLibrarian as a String
+     */
     @Override
     public String speak() {
-        Random random = new Random();
-        int index = random.nextInt(monologues.size());
+        int index = Integer.parseInt(Utility.generateRandomInt(0, monologues.size() - 1));
         return monologues.get(index);
     }
 

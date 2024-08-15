@@ -1,4 +1,4 @@
-package edu.monash.fit2099bootcamp;
+package edu.monash.fit2099bootcamp.librarian;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -6,23 +6,40 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * A class that represents a GeminiLibrarian object.
+ * The GeminiLibrarian object can generate content based on the user's prompt.
+ */
 public class GeminiLibrarian extends Librarian {
-    private static final String API_KEY = "AIzaSyBC7ZYqEM_PxW5L4M2tM2mvhFkD9x3DA4Q";
+    private static final String API_KEY = "NeverGonnaGiveYouUp";
     private static final String REQUEST_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + API_KEY;
     private String name;
 
+    /**
+     * Constructor.
+     * Name defaults to "Gemini Librarian".
+     */
     public GeminiLibrarian() {
         this.name = "Gemini Librarian";
     }
 
+    /**
+     * Returns the name of the GeminiLibrarian object.
+     *
+     * @return a String representing the name of the GeminiLibrarian object
+     */
     @Override
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Generates content based on the user's prompt.
+     *
+     * @return a String representing the generated content
+     */
     @Override
     public String speak() {
         Scanner scanner = new Scanner(System.in);
@@ -31,6 +48,12 @@ public class GeminiLibrarian extends Librarian {
         return geminiCall(prompt);
     }
 
+    /**
+     * Calls the Gemini API to generate content based on the user's prompt.
+     *
+     * @param prompt the user's prompt
+     * @return a String representing the generated content
+     */
     private String geminiCall(String prompt) {
         String result;
         try {
@@ -83,6 +106,11 @@ public class GeminiLibrarian extends Librarian {
         return result;
     }
 
+    /**
+     * Main method to test the GeminiLibrarian class.
+     *
+     * @param args the command-line arguments
+     */
 //    public static void main(String[] args) {
 //        GeminiLibrarian geminiLibrarian = new GeminiLibrarian();
 //        System.out.println(geminiLibrarian.speak());
