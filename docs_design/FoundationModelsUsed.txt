@@ -1,12 +1,13 @@
 /**Acknowledgement of Foundation Models Used
 @author Aaron Lam Kong Yew
-@version 1.0
+@version 1.2
 @since 2024-08-11
 
 In the implementation of the classes below, sections under the following were generated using generative AI (Chatgpt 3.5):
 
- StaticOneLibrarian class
-             public StaticOneLibrarian() {
+ StaticOneLibrarian class and
+ LibrarianTwo class
+             public StaticOneLibrarian() / public LibrarianTwo() {
                  monologues.add("We are only as strong as we are united, as weak as we are divided.");
                  monologues.add("It is our choices that show what we truly are, far more than our abilities.");
                  monologues.add("Happiness can be found even in the darkest of times, if one only remembers to turn on the light.");

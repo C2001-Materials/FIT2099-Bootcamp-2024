@@ -1,0 +1,67 @@
+Design Rationale for Requirement 3c:
+
+
+**Overview**
+The design involves creating an abstract Librarian class that implements the ActionCapable interface.
+The StaticOneLibrarian, LibrarianTwo, and GeminiLibrarian classes extend this abstract class.
+This design choice is driven by several object-oriented design principles and
+aims to improve code maintainability, reusability, and readability.
+
+
+**Object-Oriented Design Principles Applied**
+
+1. DRY (Don't Repeat Yourself)
+    Reason: By moving common functionality to the abstract Librarian class, we avoid code duplication.
+    Example: The allowableActions method is already provided in the parent Librarian class, reducing redundancy,
+    so that each subclass does not need to reimplement it.
+
+2. Single Responsibility Principle (SRP)
+    Reason: Each class has a single responsibility.
+                  The abstract parent Librarian class handles common librarian methods, while each subclass may add more specific behaviors.
+    Example: GeminiLibrarian focuses on interacting with Gemini API, while StaticOneLibrarian and LibrarianTwo manage specific monologues.
+
+3. Open/Closed Principle (OCP)
+    Reason: The design allows for easy extension of new librarian classes without modifying existing code.
+    Example: Adding a new librarian type only requires creating a new subclass to extend the abstract idea of a Librarian class.
+
+4. Dependency Inversion Principle (DIP)
+    Reason: High-level modules (in this case, the MagicLibrary class) do not depend on low-level modules, but on abstractions (ActionCapable interface).
+    Example: The MagicLibrary class depends on the ActionCapable interface rather than every instance of its concrete implementations.
+
+
+**Advantages and Disadvantages of the Design**
+
+1. Advantages of the Design
+    Code Reusability
+    Common functionality (allowableActions) is abstracted in the Librarian class, making is reusable across different librarian types.
+    Extensibility
+    New librarian types can be added with minimal changes to existing code, which relates to OCP.
+    Decoupling
+    The use of the ActionCapable interface decouples the MagicLibrary class from specific librarian implementations, making it easier to switch between them.
+
+2. Disadvantages of the Design
+    Complexity
+    Introducing an abstract class and multiple subclasses can increase the complexity of the codebase, for new developers.
+    Overhead
+    The need to override methods in subclasses can introduce some overhead, especially if the methods are already simple enough.
+    Learning Curve
+    New developers may need time to understand abstraction, inheritance, and interfaces, which were used in this design.
+
+
+**Advantages of Using Actions**
+
+Flexibility
+In the future, new actions can be added without modifying existing classes, adhering to the OCP.
+For example, new Actions such as "ReturnAction" or "BuyAction" can be added without changing the existing Action Interface.
+Reusability
+Actions can be reused across different classes, promoting code reuse.
+In our case, "TalkAction" is used by multiple classes such as :"StaticOneLibrarian", "LibrarianTwo" and "GeminiLibrarian".
+Decoupling
+The Action interface decouples the action execution logic from the classes that use them, increasing flexibility.
+For instance, the addActionsTOMenu method in the MagicLibrary class can work with any class that implements the Action interface.
+
+**Conclusion**
+To sump up, the design choices for Requirement 3c follows object-oriented design principles,
+to help improve code maintainability, and promote reusability.
+While there are some disadvantages, the benefits of a clean and modular repository bootcamp outweigh the drawbacks.
+The use of the Librarian abstract class and the Action interface will all in all, increase cohesion while reduce coupling in our system.

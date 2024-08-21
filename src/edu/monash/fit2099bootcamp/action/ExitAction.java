@@ -1,8 +1,18 @@
 package edu.monash.fit2099bootcamp.action;
 
-import edu.monash.fit2099bootcamp.User;
+import edu.monash.fit2099bootcamp.actioncapables.User;
 
+/**
+ * A class that represents an ExitAction, implementing Action interface.
+ */
 public class ExitAction implements Action {
+
+    /**
+     * Executes the ExitAction.
+     *
+     * @param user the User object
+     * @return a String representing the result of the action
+     */
     @Override
     public String execute(User user) {
         String ANSI_YELLOW = "\u001B[33m";
@@ -12,6 +22,11 @@ public class ExitAction implements Action {
         return null;
     }
 
+    /**
+     * Returns a description of the action.
+     *
+     * @return a String representing the description of the action
+     */
     @Override
     public String menuDescription() {
         return "Exit from Hogwarts library";
