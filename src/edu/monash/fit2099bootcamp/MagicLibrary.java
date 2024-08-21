@@ -3,6 +3,7 @@ package edu.monash.fit2099bootcamp;
 import edu.monash.fit2099bootcamp.action.Action;
 import edu.monash.fit2099bootcamp.actioncapables.User;
 import edu.monash.fit2099bootcamp.actioncapables.librarian.GeminiLibrarian;
+import edu.monash.fit2099bootcamp.actioncapables.librarian.Librarian;
 import edu.monash.fit2099bootcamp.actioncapables.librarian.LibrarianTwo;
 import edu.monash.fit2099bootcamp.actioncapables.librarian.StaticOneLibrarian;
 import edu.monash.fit2099bootcamp.actioncapables.magicbook.*;
@@ -18,6 +19,7 @@ import java.util.List;
 public class MagicLibrary {
     private final List<MagicBook> magicBooks;
     private User user;
+    private final List<Librarian> librarians;
 
     /**
      * Constructor.
@@ -25,6 +27,7 @@ public class MagicLibrary {
     public MagicLibrary() {
         this.magicBooks = new ArrayList<>();
         this.user = new User(0, 0);
+        this.librarians = new ArrayList<>();
     }
 
     /**
@@ -43,6 +46,12 @@ public class MagicLibrary {
         magicBooks.add(new AncientMagicBook("Scars of Salem: Essays on the Witch Trials of 1692", "Carlos Eduardos", 5));
     }
 
+    public void addLibrarians() {
+        librarians.add(new StaticOneLibrarian());
+        librarians.add(new LibrarianTwo());
+        librarians.add(new GeminiLibrarian());
+    }
+
     /**
      * Collects all possible actions that can be performed,
      * and displays them as a text based-menu.
@@ -54,10 +63,7 @@ public class MagicLibrary {
 
             List<ActionCapable> actionCapables = new ArrayList<>();
             actionCapables.add(user); // ExitAction
-            actionCapables.add(new StaticOneLibrarian()); // TalkAction
-            actionCapables.add(new LibrarianTwo()); // TalkAction
-            actionCapables.add(new GeminiLibrarian()); // TalkAction
-
+            actionCapables.addAll(librarians); // TalkAction
             actionCapables.addAll(magicBooks); // ReadAction and BorrowAction
             for (ActionCapable actionCapable : actionCapables) {
                 actions.addAll(actionCapable.allowableActions());
@@ -76,6 +82,7 @@ public class MagicLibrary {
     public void printStatus() {
         System.out.println("\nWelcome to Hogwarts Library of FIT2099");
         createBooks();
+        addLibrarians();
         addActionsToMenu();
     }
 }
