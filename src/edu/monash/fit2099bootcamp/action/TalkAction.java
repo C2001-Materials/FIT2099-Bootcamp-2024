@@ -5,6 +5,9 @@ import edu.monash.fit2099bootcamp.actioncapables.User;
 
 /**
  * A class that represents a TalkAction, implementing Action interface.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 5.0.0
  */
 public class TalkAction implements Action {
     private final Librarian librarian;

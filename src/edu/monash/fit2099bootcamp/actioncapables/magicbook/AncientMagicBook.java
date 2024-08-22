@@ -6,6 +6,9 @@ import edu.monash.fit2099bootcamp.Utility;
 
 /**
  * A class that represents an AncientMagicBook, extending MagicBook class.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 2.1.0
  */
 public class AncientMagicBook extends MagicBook {
     private int magicPoint;
@@ -50,6 +53,6 @@ public class AncientMagicBook extends MagicBook {
      */
     @Override
     public String toString() {
-        return super.toString() + "Magic Point: " + magicPoint;
+        return super.toString() + "Magic Point: " + magicPoint + " | Book Type: " + status;
     }
 }

@@ -7,6 +7,9 @@ import java.util.List;
 /**
  * An interface that represents an ActionCapable object.
  * Classes that implement this interface must provide a list of allowable actions.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 1.0.0
  */
 public interface ActionCapable {
 

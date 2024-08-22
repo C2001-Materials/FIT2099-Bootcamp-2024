@@ -10,6 +10,9 @@ import java.util.List;
 
 /**
  * An abstract class that represents a MagicBook, implementing ActionCapable interface.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 2.1.0
  */
 public abstract class MagicBook implements ActionCapable {
     private String ID;
@@ -66,9 +69,9 @@ public abstract class MagicBook implements ActionCapable {
      */
     @Override
     public String toString() {
-        return "Name: " + title + " | " +
-                "Author: " + author + " | " +
-                "ID: " + ID + " | ";
-
+        String bar = "\u001B[33m|\u001B[0m";
+        return "Name: " + title + " " + bar + " " +
+                "Author: " + author + " " + bar + " " +
+                "ID: " + ID + " " + bar + " ";
     }
 }

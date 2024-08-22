@@ -4,6 +4,9 @@ import edu.monash.fit2099bootcamp.actioncapables.User;
 
 /**
  * A class that represents an ExitAction, implementing Action interface.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 2.4.0
  */
 public class ExitAction implements Action {
 

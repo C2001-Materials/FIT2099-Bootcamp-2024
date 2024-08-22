@@ -11,6 +11,9 @@ import java.util.List;
 
 /**
  * A class that represents a SpellBook, extending MagicBook and implementing Borrowable interface.
+ *
+ @author Aaron Lam Kong Yew
+  @version 2.1.0
  */
 public class SpellBook extends MagicBook implements Borrowable {
     private int magicPoint;
@@ -82,6 +85,6 @@ public class SpellBook extends MagicBook implements Borrowable {
      */
     @Override
     public String toString() {
-        return super.toString() + "Magic Point: " + magicPoint;
+        return super.toString() + "Magic Point: " + magicPoint + " | Book Type: Spell";
     }
 }

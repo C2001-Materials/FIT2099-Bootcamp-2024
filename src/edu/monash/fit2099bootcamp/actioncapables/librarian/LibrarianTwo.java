@@ -6,6 +6,9 @@ import java.util.ArrayList;
 
 /**
  * A class that represents a LibrarianTwo, extending from Librarian.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 2.5.0
  */
 public class LibrarianTwo extends Librarian {
     private ArrayList<String> monologues;
@@ -26,7 +29,7 @@ public class LibrarianTwo extends Librarian {
         monologues.add("The truth. It is a beautiful and terrible thing, and should therefore be treated with great caution.");
         monologues.add("It does not do to dwell on dreams and forget to live.");
         monologues.add("A common mistake students make is submitting their assignments as draft.");
-        monologues.add("Are you SUREE that's not an abstract class?");
+        monologues.add("Are you sure that's not an abstract class?");
         monologues.add("Haiyaa, you should have used a for-each loop instead of a while loop.");
     }
 

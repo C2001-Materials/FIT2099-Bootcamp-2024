@@ -14,6 +14,9 @@ import java.util.List;
  * A class that represents a User, implementing ActionCapable interface.
  * The user can perform actions and has magic points and dark magic points.
  * The user can also borrow books from the library, and has a set of capabilities.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 1.0.0
  */
 public class User implements ActionCapable {
     private int magicPoint;
@@ -148,7 +151,7 @@ public class User implements ActionCapable {
     }
 
     /**
-     * Determines wether the User wants to leave the library.
+     * Determines whether the User wants to leave the library.
      *
      * @return True if the User wants to leave the library, False otherwise
      */

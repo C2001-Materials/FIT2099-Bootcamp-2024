@@ -7,6 +7,9 @@ import java.util.*;
 /**
  * A class that represents a Menu op options,
  * allowing the User to select an Action from a list of Actions.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 1.0.0
  */
 public class Menu {
 
@@ -31,7 +34,8 @@ public class Menu {
             char c = freeChars.get(0);
             freeChars.remove(Character.valueOf(c));
             keyToActionMap.put(c, action);
-            System.out.println(c + ": " + action.menuDescription());
+            String bar = "\u001B[33m :  \u001B[0m";
+            System.out.println(c + bar+ action.menuDescription());
         }
 
         char key;

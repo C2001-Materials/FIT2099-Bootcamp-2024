@@ -11,6 +11,9 @@ import java.util.List;
 
 /**
  * A class that represents a DarkArtBook, extending MagicBook and implementing Borrowable interface.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 2.1.0
  */
 public class DarkArtBook extends MagicBook implements Borrowable {
     private int darkMagicPoint;
@@ -73,6 +76,6 @@ public class DarkArtBook extends MagicBook implements Borrowable {
      */
     @Override
     public String toString() {
-        return super.toString() + "Dark Magic Point: " + darkMagicPoint;
+        return super.toString() + "Dark Magic Point: " + darkMagicPoint + " | Book Type: " + status;
     }
 }

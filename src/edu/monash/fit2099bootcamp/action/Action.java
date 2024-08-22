@@ -5,6 +5,9 @@ import edu.monash.fit2099bootcamp.actioncapables.User;
 /**
  * An interface that represents an Action.
  * WIll be implemented by concrete classes.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 1.0.0
  */
 public interface Action {
 

@@ -5,6 +5,9 @@ import edu.monash.fit2099bootcamp.actioncapables.User;
 
 /**
  * A class that represents a BorrowAction, implementing Action interface.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 2.1.0
  */
 public class BorrowAction implements Action {
     private Borrowable magicBook;

@@ -9,6 +9,9 @@ import java.util.List;
 
 /**
  * An abstract class that represents a Librarian, implementing ActionCapable interface.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 6.0.0
  */
 public abstract class Librarian implements ActionCapable {
 

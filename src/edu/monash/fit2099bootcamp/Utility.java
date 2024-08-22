@@ -4,6 +4,9 @@ import java.util.Random;
 
 /**
  * A class that represents the functionality of generating random integers.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 1.0.0
  */
 public class Utility {
 

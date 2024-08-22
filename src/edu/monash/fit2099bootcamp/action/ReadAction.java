@@ -3,6 +3,12 @@ package edu.monash.fit2099bootcamp.action;
 import edu.monash.fit2099bootcamp.actioncapables.User;
 import edu.monash.fit2099bootcamp.actioncapables.magicbook.MagicBook;
 
+/**
+ * A class that represents a ReadAction, implementing Action interface.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 1.4.0
+ */
 public class ReadAction implements Action {
     private MagicBook magicBook;
 
@@ -33,7 +39,8 @@ public class ReadAction implements Action {
         int userNewMagicPoint = user.getMagicPoint();
         int userNewDarkMagicPoint = user.getDarkMagicPoint();
 
-        return "User now has Magic points of " + ANSI_YELLOW+userNewMagicPoint +ANSI_RESET+ " and Dark Magic points of " +ANSI_YELLOW+ userNewDarkMagicPoint+ANSI_RESET;
+        return "User now has Magic points of " + ANSI_YELLOW+userNewMagicPoint +ANSI_RESET+ " and Dark Magic points of " +ANSI_YELLOW+ userNewDarkMagicPoint+ANSI_RESET +
+                " after reading " + magicBook.getTitle();
     }
 
     /**

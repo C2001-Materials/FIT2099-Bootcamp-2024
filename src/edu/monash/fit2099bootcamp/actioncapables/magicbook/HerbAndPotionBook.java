@@ -11,6 +11,9 @@ import java.util.List;
 
 /**
  * A class that represents a HerbAndPotionBook, extending MagicBook and implementing Borrowable interface.
+ *
+ * @author Aaron Lam Kong Yew
+ * @version 2.1.0
  */
 public class HerbAndPotionBook extends MagicBook implements Borrowable {
     private int magicPoint;
@@ -69,6 +72,6 @@ public class HerbAndPotionBook extends MagicBook implements Borrowable {
      */
     @Override
     public String toString() {
-        return super.toString() + "Magic Point: " + magicPoint;
+        return super.toString() + "Magic Point: " + magicPoint + " | Book Type: Herb and Potion";
     }
 }
