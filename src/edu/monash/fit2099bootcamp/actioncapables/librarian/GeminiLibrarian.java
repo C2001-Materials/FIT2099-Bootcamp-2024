@@ -16,7 +16,7 @@ import java.util.Scanner;
  * @version 2.2.0
  */
 public class GeminiLibrarian extends Librarian {
-    private static final String API_KEY = "AIzaSyBC7ZYqEM_PxW5L4M2tM2mvhFkD9x3DA4Q";
+    private static final String API_KEY = "NeverGonnaGiveYouUpAPIKey";
     private static final String REQUEST_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + API_KEY;
     private String name;
 
