@@ -18,15 +18,15 @@ aims to improve code maintainability, reusability, and readability.
 2. Single Responsibility Principle (SRP)
     Reason: Each class has a single responsibility.
                   The abstract parent Librarian class handles common librarian methods, while each subclass may add more specific behaviors.
-    Example: GeminiLibrarian focuses on interacting with Gemini API, while StaticOneLibrarian and LibrarianTwo manage specific monologues.
+    Example: GeminiLibrarian focuses on interacting with Gemini API, while StaticOneLibrarian and LibrarianTwo manage specific monologues and hardcoded interactions with the User class.
 
 3. Open/Closed Principle (OCP)
     Reason: The design allows for easy extension of new librarian classes without modifying existing code.
-    Example: Adding a new librarian type only requires creating a new subclass to extend the abstract idea of a Librarian class.
+    Example: Adding a new librarian type only requires creating a new subclass to extend the abstract idea of a Librarian class. Librarian class can avoid being modified.
 
 4. Dependency Inversion Principle (DIP)
     Reason: High-level modules (in this case, the MagicLibrary class) do not depend on low-level modules, but on abstractions (ActionCapable interface).
-    Example: The MagicLibrary class depends on the ActionCapable interface rather than every instance of its concrete implementations.
+    Example: The MagicLibrary class depends on the ActionCapable interface rather than every instance of its concrete implementations depending on the MagicLibrary.
 
 
 **Advantages and Disadvantages of the Design**
