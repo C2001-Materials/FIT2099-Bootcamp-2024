@@ -2,10 +2,7 @@ package edu.monash.fit2099bootcamp;
 
 import edu.monash.fit2099bootcamp.action.Action;
 import edu.monash.fit2099bootcamp.actioncapables.User;
-import edu.monash.fit2099bootcamp.actioncapables.librarian.GeminiLibrarian;
 import edu.monash.fit2099bootcamp.actioncapables.librarian.Librarian;
-import edu.monash.fit2099bootcamp.actioncapables.librarian.LibrarianTwo;
-import edu.monash.fit2099bootcamp.actioncapables.librarian.StaticOneLibrarian;
 import edu.monash.fit2099bootcamp.actioncapables.magicbook.*;
 
 import java.util.ArrayList;
@@ -28,11 +25,12 @@ public class MagicLibrary {
 
     /**
      * Constructor.
+     * Uses Dependency Injection to inject the MagicBooks, User, and Librarians.
      */
-    public MagicLibrary() {
-        this.magicBooks = new ArrayList<>();
-        this.user = new User(0, 0);
-        this.librarians = new ArrayList<>();
+    public MagicLibrary( List<MagicBook> magicBooks, User user, List<Librarian> librarians) {
+        this.magicBooks = magicBooks;
+        this.user = user;
+        this.librarians = librarians;
     }
 
     /**
@@ -49,15 +47,6 @@ public class MagicLibrary {
         magicBooks.add(new AncientMagicBook("Scars of Salem: Essays on the Witch Trials of 1692", "Carlos Eduardos", 5));
         magicBooks.add(new DarkArtBook("Magick Moste Evile", "Godelot", 20));
         magicBooks.add(new DarkArtBook("Secrets of the Darkest Art", "Owle Bullock", 30));
-    }
-
-    /**
-     * Appends new Librarian classes to the MagicLibrary.
-     */
-    public void addLibrarians() {
-        librarians.add(new StaticOneLibrarian());
-        librarians.add(new LibrarianTwo());
-        librarians.add(new GeminiLibrarian());
     }
 
     /**
@@ -90,7 +79,6 @@ public class MagicLibrary {
     public void printStatus() {
         System.out.println("\n" + "\u001B[33m" + "Welcome to Hogwarts Library of FIT2099" + "\u001B[0m"); // yellow
         createBooks();
-        addLibrarians();
         addActionsToMenu();
     }
 }
